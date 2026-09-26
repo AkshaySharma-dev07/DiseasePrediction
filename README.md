@@ -1,46 +1,99 @@
-The Disease Prediction System is a Python-based machine learning application that predicts a possible disease from selected symptoms.
+# Disease Prediction System
 
-The system uses a Random Forest classification model trained on a dataset containing 4, 920 records, 41 diseases, and 131 unique symptoms.
+A machine-learning-based web application that predicts a possible
+disease from user-provided symptoms.
 
-This project was developed as an educational project to demonstrate Python programming, data processing, machine learning, modular programming, and a user interface.
+## Features
 
-> **Medical Disclaimer:** This project is for educational purposes only. It is not a medical diagnostic tool and should not replace advice from a qualified healthcare professional.
+-   Interactive web interface built with Streamlit
+-   Symptom-based disease prediction
+-   Trained disease prediction model
+-   Symptom encoding for model input
+-   CSV-based dataset
+-   Separate modules for data loading, model handling, and prediction
 
-- Select multiple symptoms through a web interface.
-- Process and clean symptom data.
-- Predict a disease using a Random Forest classifier.
-- Display the top three model predictions.
-- Display prediction probabilities.
-- Validate that the user selects enough symptoms.
-- Modular Python project structure.
-- Automated model training and model storage.
+## Project Structure
 
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Streamlit
-- Joblib
-- Matplotlib
-
-```text
+``` text
 DiseasePrediction/
-│
 ├── data/
 │   └── dataset.csv
-│
 ├── model/
 │   ├── disease_model.pkl
 │   └── symptom_encoder.pkl
-│
-├── tests/
-│
 ├── docs/
-│
-├── app.py
+├── tests/
+├── apps.py
 ├── data_loader.py
 ├── model.py
 ├── predictor.py
 ├── requirements.txt
-├── statement.md
-└── README.md
+├── README.md
+└── statement.md
+```
+
+## Technologies Used
+
+-   Python
+-   Streamlit
+-   Machine Learning
+-   Pandas
+-   NumPy
+-   Scikit-learn
+
+## How to Run
+
+### 1. Clone the repository
+
+``` bash
+git clone https://github.com/AkshaySharma-dev07/DiseasePrediction.git
+cd DiseasePrediction
+```
+
+### 2. Create a virtual environment
+
+``` bash
+python -m venv .venv
+```
+
+### 3. Activate the virtual environment
+
+**Windows PowerShell:**
+
+``` powershell
+.venv\Scripts\Activate.ps1
+```
+
+### 4. Install dependencies
+
+``` bash
+python -m pip install -r requirements.txt
+```
+
+### 5. Run the application
+
+``` bash
+python -m streamlit run apps.py
+```
+
+Streamlit will display a local URL in the terminal. Open that URL in a
+web browser to use the application.
+
+## How It Works
+
+1.  The user provides symptoms through the web interface.
+2.  The symptoms are processed and encoded.
+3.  The trained machine-learning model uses the processed input.
+4.  The application displays the predicted disease.
+
+## Project Purpose
+
+The project demonstrates how machine learning can be integrated with a
+simple web interface to create an interactive symptom-based disease
+prediction system.
+
+## Note
+
+This project is intended for educational and demonstration purposes. Its
+predictions should not be treated as a medical diagnosis or a substitute
+for professional medical advice.
